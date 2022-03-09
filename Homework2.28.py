@@ -92,6 +92,16 @@ readFile = fileName
 df_stk5 = pd.read_csv(readFile,index_col='Date',parse_dates=True)
 df_stk.head()
 
+# %% Merging 
+df_LULU_merge = pd.merge(df_LULU, df_wLULU,left_index=True, right_index=True)
+df_SBUX_merge = pd.merge(df_SBUX, df_wSBUX,left_index=True, right_index=True)
+df_TGT_merge = pd.merge(df_TGT, df_wTGT,left_index=True, right_index=True)
+
+
+# %% Plotting the Data 
+
+import matplotlib.pyplot as ply 
+
 plt.plot(df["Date"],df["TGT"], label="TGT")
 plt.plot(df["Date"],df["wTGT"], label="wTGT")
 plt.plot(df["Date"],df["LULU"], label="LULU")

@@ -102,7 +102,7 @@ plt.plot(df["Date"],df["wSBUX"], label="wSBUX")
 
 #This is pretty much the design of the plot
 plt.tight_layout()
-plt.title("YF & BB Data LULU, TGT, & SBUX Stock Returns", size = 20)
+plt.title("YF & w Data LULU, TGT, & SBUX Stock Returns", size = 20)
 plt.legend() 
 plt.show()
 plt.style.use('seaborn')
